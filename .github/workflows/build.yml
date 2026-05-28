@@ -33,6 +33,14 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug --stacktrace
 
+    # BLOCK ADDED BELOW: This will show us the folder structure in the logs
+    - name: List files for debugging
+      if: always()
+      run: |
+        echo "Searching for build outputs..."
+        find . -type d -name "apk"
+        find . -name "*.apk"
+
     - name: Run tests
       run: ./gradlew test
       continue-on-error: true
@@ -41,6 +49,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
-        # This path is more inclusive to catch APKs in any module
         path: '**/build/outputs/apk/debug/*.apk'
         if-no-files-found: error
