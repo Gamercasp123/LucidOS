@@ -22,6 +22,10 @@ jobs:
     - name: Set up Gradle
       uses: gradle/actions/setup-gradle@v3
 
+    # Fixes exit code 126 (Permission Denied)
+    - name: Make Gradlew Executable
+      run: chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
 
