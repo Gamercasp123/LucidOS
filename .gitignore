@@ -27,6 +27,7 @@ local.properties
 *.swp
 *.swo
 *~
+*.hprof
 
 # Dependencies
 /node_modules/
