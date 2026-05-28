@@ -7,7 +7,7 @@ import android.util.Log
  * Manager for the Status Bar system component
  */
 object StatusBarManager {
-    private const val TAG = "StatusBarManager"
+    private val TAG = "StatusBarManager"
 
     fun initialize(context: Context) {
         Log.d(TAG, "Initializing Status Bar")

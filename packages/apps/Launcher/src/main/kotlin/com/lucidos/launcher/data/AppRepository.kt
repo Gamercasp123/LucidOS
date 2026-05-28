@@ -10,7 +10,9 @@ import java.util.Collections
  * Repository for managing installed applications
  */
 class AppRepository(private val context: Context) {
-    private const val TAG = "AppRepository"
+    private companion object {
+        const val TAG = "AppRepository"
+    }
 
     private val packageManager: PackageManager = context.packageManager
     private val appList = mutableListOf<AppInfo>()
@@ -19,13 +21,14 @@ class AppRepository(private val context: Context) {
         Log.d(TAG, "Loading installed applications")
         appList.clear()
 
-        val packages = packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
+        val packages = packageManager.getInstalledPackages(PackageManager.GET_META_DATA)
 
         for (packageInfo in packages) {
             try {
-                val appName = packageManager.getApplicationLabel(packageInfo).toString()
-                val appIcon = packageManager.getApplicationIcon(packageInfo.packageName)
-                val isSystemApp = (packageInfo.flags and ApplicationInfo.FLAG_SYSTEM) != 0
+                val applicationInfo = packageInfo.applicationInfo ?: continue
+                val appName = packageManager.getApplicationLabel(applicationInfo).toString()
+                val appIcon = packageManager.getApplicationIcon(applicationInfo)
+                val isSystemApp = (applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM) != 0
 
                 val appInfo = AppInfo(
                     packageName = packageInfo.packageName,

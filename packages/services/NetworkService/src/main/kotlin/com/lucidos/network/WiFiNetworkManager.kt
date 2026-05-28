@@ -9,7 +9,7 @@ import android.util.Log
  * WiFi network manager with scanning and connection
  */
 class WiFiNetworkManager(private val context: Context) {
-    private const val TAG = "WiFiNetworkManager"
+    private val TAG = "WiFiNetworkManager"
     private val wifiManager = context.applicationContext.getSystemService(Context.WIFI_SERVICE) as? WifiManager
 
     fun startWifiScan() {

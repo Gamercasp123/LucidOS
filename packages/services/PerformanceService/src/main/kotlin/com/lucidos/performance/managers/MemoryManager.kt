@@ -9,7 +9,7 @@ import com.lucidos.performance.MemoryInfo
  * Manager for memory optimization and management
  */
 class MemoryManager(context: Context) {
-    private const val TAG = "MemoryManager"
+    private val TAG = "MemoryManager"
     private val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
 
     fun getMemoryInfo(): MemoryInfo {

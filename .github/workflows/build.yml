@@ -37,7 +37,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --stacktrace --info
 
     - name: Run tests
       run: ./gradlew test
@@ -47,4 +47,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
-        path: '**/build/outputs/**/*.apk'
+        path: '**/build/outputs/apk/**/*.apk'

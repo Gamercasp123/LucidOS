@@ -13,7 +13,7 @@ import com.lucidos.connectivity.NfcManager
  * Manager for Quick Settings system component
  */
 object QuickSettingsManager {
-    private const val TAG = "QuickSettingsManager"
+    private val TAG = "QuickSettingsManager"
     private var wifiManager: WiFiManager? = null
     private var bluetoothManager: BluetoothManager? = null
     private var nfcManager: NfcManager? = null

@@ -45,7 +45,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.0"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
 }
 
@@ -59,8 +59,9 @@ dependencies {
     implementation("androidx.compose.ui:ui:1.5.0")
     implementation("androidx.compose.material3:material3:1.1.1")
 
-    // Security
+    // Security & Biometric
     implementation("androidx.security:security-crypto:1.1.0-alpha06")
+    implementation("androidx.biometric:biometric:1.1.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

@@ -14,7 +14,8 @@ LucidOS is a custom AOSP (Android Open Source Project) based ROM designed to del
 
 ```
 LucidOS/
-├── build/               # Build scripts and configuration
+├── build.gradle.kts     # Root build configuration
+├── settings.gradle.kts  # Project settings and module inclusion
 ├── packages/
 │   ├── apps/           # System applications
 │   └── services/       # System services
@@ -29,11 +30,11 @@ LucidOS/
 ## Getting Started
 
 ### Prerequisites
-- Java Development Kit (JDK 11+)
+- Java Development Kit (JDK 17+)
 - Android SDK
 - Git
 - Gradle
-- Text editor or IDE (VS Code recommended)
+- Android Studio (recommended)
 
 ### Setup
 

@@ -9,7 +9,7 @@ import android.util.Log
  * Manager for CPU and thermal management
  */
 class CPUThermalManager(context: Context) {
-    private const val TAG = "CPUThermalManager"
+    private val TAG = "CPUThermalManager"
     private val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
 
     private var currentPowerProfile = PowerProfile.BALANCED

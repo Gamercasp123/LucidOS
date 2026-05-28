@@ -11,7 +11,9 @@ import android.util.Log
  * Background service for launcher operations and app monitoring.
  */
 class LauncherService : Service() {
-    private const val TAG = "LauncherService"
+    private companion object {
+        const val TAG = "LauncherService"
+    }
 
     override fun onCreate() {
         super.onCreate()

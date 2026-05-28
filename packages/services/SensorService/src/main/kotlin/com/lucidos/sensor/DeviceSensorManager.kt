@@ -11,7 +11,7 @@ import android.util.Log
  * Sensor manager for accelerometer, gyroscope, proximity, etc.
  */
 class DeviceSensorManager(private val context: Context) : SensorEventListener {
-    private const val TAG = "DeviceSensorManager"
+    private val TAG = "DeviceSensorManager"
 
     private val sensorManager = context.getSystemService(Context.SENSOR_SERVICE) as? SensorManager
 

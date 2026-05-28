@@ -6,7 +6,7 @@ import android.util.Log
 
 class BluetoothManager(private val context: Context) {
     private val TAG = "BluetoothManager"
-    private val adapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
+    private val adapter: BluetoothAdapter? = (context.getSystemService(Context.BLUETOOTH_SERVICE) as? android.bluetooth.BluetoothManager)?.adapter
 
     fun isBluetoothEnabled(): Boolean {
         return try {

@@ -46,7 +46,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.0"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
 }
 
@@ -63,7 +63,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
 
     // Android Framework
-    implementation("android.frameworks.base:framework:1.0")
+    // implementation("android.frameworks.base:framework:1.0")
     implementation(project(":packages:services:ConnectivityService"))
 
     // Testing

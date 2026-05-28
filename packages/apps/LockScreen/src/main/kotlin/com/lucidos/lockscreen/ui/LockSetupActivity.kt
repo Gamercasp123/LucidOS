@@ -15,7 +15,7 @@ import com.lucidos.lockscreen.security.CredentialManager
  * Lock Screen Setup Activity - Configure authentication
  */
 class LockSetupActivity : AppCompatActivity() {
-    private const val TAG = "LockSetupActivity"
+    private val TAG = "LockSetupActivity"
 
     private lateinit var credentialManager: CredentialManager
     private var selectedAuthType = CredentialManager.AuthType.PIN_4

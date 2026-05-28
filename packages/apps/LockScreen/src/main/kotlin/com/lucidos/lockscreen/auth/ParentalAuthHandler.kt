@@ -7,7 +7,7 @@ import com.lucidos.lockscreen.security.CredentialManager
  * Parental PIN authentication handler
  */
 class ParentalAuthHandler(private val credentialManager: CredentialManager) {
-    private const val TAG = "ParentalAuthHandler"
+    private val TAG = "ParentalAuthHandler"
     private var attempts = 0
     private val maxAttempts = 3
 

@@ -7,7 +7,7 @@ import com.lucidos.lockscreen.security.CredentialManager
  * Password authentication handler (16+ characters)
  */
 class PasswordAuthHandler(private val credentialManager: CredentialManager) {
-    private const val TAG = "PasswordAuthHandler"
+    private val TAG = "PasswordAuthHandler"
     private var attempts = 0
     private val maxAttempts = 5
 

@@ -8,7 +8,7 @@ import java.security.MessageDigest
  * Secure credential storage and validation
  */
 class CredentialManager(private val context: Context) {
-    private const val TAG = "CredentialManager"
+    private val TAG = "CredentialManager"
     private val prefs = context.getSharedPreferences("lock_creds", Context.MODE_PRIVATE)
 
     enum class AuthType {

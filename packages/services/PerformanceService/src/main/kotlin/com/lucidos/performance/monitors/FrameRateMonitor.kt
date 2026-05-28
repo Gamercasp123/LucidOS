@@ -7,7 +7,7 @@ import kotlin.system.measureTimeMillis
  * Monitor for frame rate and rendering performance
  */
 class FrameRateMonitor {
-    private const val TAG = "FrameRateMonitor"
+    private val TAG = "FrameRateMonitor"
 
     private var frameCount = 0
     private var lastTimestamp = System.currentTimeMillis()

@@ -11,7 +11,7 @@ import android.util.Log
  * Dedicated service for managing status bar operations.
  */
 class StatusBarService : Service() {
-    private const val TAG = "StatusBarService"
+    private val TAG = "StatusBarService"
 
     override fun onCreate() {
         super.onCreate()

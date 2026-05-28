@@ -13,7 +13,6 @@ android {
 
     defaultConfig {
         minSdk = 33
-        targetSdk = 34
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -43,7 +42,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
 
     // System
-    implementation("android.frameworks.base:framework:1.0")
+    // implementation("android.frameworks.base:framework:1.0")
 
     // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")

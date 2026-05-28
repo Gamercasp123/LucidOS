@@ -7,7 +7,7 @@ import com.lucidos.lockscreen.security.CredentialManager
  * PIN authentication handler (4 or 6 digits)
  */
 class PinAuthHandler(private val credentialManager: CredentialManager) {
-    private const val TAG = "PinAuthHandler"
+    private val TAG = "PinAuthHandler"
     private var attempts = 0
     private val maxAttempts = 5
 

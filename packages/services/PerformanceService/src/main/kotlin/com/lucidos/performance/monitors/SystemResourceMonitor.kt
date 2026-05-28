@@ -12,7 +12,7 @@ class SystemResourceMonitor(
     private val batteryManager: com.lucidos.performance.managers.BatteryManager,
     private val frameRateMonitor: FrameRateMonitor
 ) {
-    private const val TAG = "SystemResourceMonitor"
+    private val TAG = "SystemResourceMonitor"
 
     fun getSystemMetrics(): SystemMetrics {
         return SystemMetrics(

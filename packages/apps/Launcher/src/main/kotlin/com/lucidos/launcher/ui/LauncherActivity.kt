@@ -3,6 +3,7 @@ package com.lucidos.launcher.ui
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.OnBackPressedCallback
 import com.lucidos.launcher.R
 
 /**
@@ -12,7 +13,9 @@ import com.lucidos.launcher.R
  * Displays apps, widgets, and shortcuts.
  */
 class LauncherActivity : AppCompatActivity() {
-    private const val TAG = "LauncherActivity"
+    private companion object {
+        const val TAG = "LauncherActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +25,13 @@ class LauncherActivity : AppCompatActivity() {
         setupHomeScreen()
         setupAppGrid()
         setupGestureHandling()
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                Log.d(TAG, "Back pressed - not leaving home screen")
+                // Don't leave home screen
+            }
+        })
     }
 
     override fun onResume() {
@@ -50,8 +60,4 @@ class LauncherActivity : AppCompatActivity() {
         // Reload and refresh the app grid
     }
 
-    override fun onBackPressed() {
-        Log.d(TAG, "Back pressed - not leaving home screen")
-        // Don't leave home screen
-    }
 }

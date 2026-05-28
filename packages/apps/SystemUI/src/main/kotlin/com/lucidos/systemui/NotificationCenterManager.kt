@@ -7,7 +7,7 @@ import android.util.Log
  * Manager for the Notification Center system component
  */
 object NotificationCenterManager {
-    private const val TAG = "NotificationCenterManager"
+    private val TAG = "NotificationCenterManager"
 
     fun initialize(context: Context) {
         Log.d(TAG, "Initializing Notification Center")

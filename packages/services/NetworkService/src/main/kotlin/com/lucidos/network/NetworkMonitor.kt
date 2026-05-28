@@ -9,7 +9,7 @@ import android.util.Log
  * Network connectivity status monitor
  */
 class NetworkMonitor(private val context: Context) {
-    private const val TAG = "NetworkMonitor"
+    private val TAG = "NetworkMonitor"
     private val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
 
     data class NetworkStatus(

@@ -11,7 +11,7 @@ import android.util.Log
  * Main service that manages all system UI components and services.
  */
 class SystemUIService : Service() {
-    private const val TAG = "SystemUIService"
+    private val TAG = "SystemUIService"
 
     override fun onCreate() {
         super.onCreate()

@@ -6,7 +6,7 @@
 - **OS**: Linux (Ubuntu 20.04+ recommended), macOS, or Windows with WSL2
 - **RAM**: 8GB minimum, 16GB+ recommended
 - **Storage**: 50GB+ free space
-- **Java**: JDK 11 or later
+- **Java**: JDK 17 or later
 
 ### Required Tools
 - Git
@@ -20,10 +20,10 @@
 
 ```bash
 # Ubuntu/Debian
-sudo apt-get install openjdk-11-jdk
+sudo apt-get install openjdk-17-jdk
 
 # macOS
-brew install openjdk@11
+brew install openjdk@17
 ```
 
 ### 2. Install Android SDK

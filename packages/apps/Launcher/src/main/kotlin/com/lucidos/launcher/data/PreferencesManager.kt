@@ -8,8 +8,10 @@ import android.util.Log
  * Manager for launcher preferences and settings
  */
 class PreferencesManager(context: Context) {
-    private const val TAG = "PreferencesManager"
-    private const val PREFS_NAME = "lucidos_launcher_prefs"
+    private companion object {
+        const val TAG = "PreferencesManager"
+        const val PREFS_NAME = "lucidos_launcher_prefs"
+    }
 
     private val preferences: SharedPreferences =
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)

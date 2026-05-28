@@ -7,7 +7,7 @@ import android.util.Log
  * Manager for the Navigation Bar system component
  */
 object NavigationBarManager {
-    private const val TAG = "NavigationBarManager"
+    private val TAG = "NavigationBarManager"
 
     fun initialize(context: Context) {
         Log.d(TAG, "Initializing Navigation Bar")

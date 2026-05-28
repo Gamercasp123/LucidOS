@@ -10,7 +10,7 @@ import android.util.Log
  * Manager for battery optimization and monitoring
  */
 class BatteryManager(context: Context) {
-    private const val TAG = "BatteryManager"
+    private val TAG = "BatteryManager"
     private val context = context.applicationContext
 
     fun getBatteryLevel(): Int {
