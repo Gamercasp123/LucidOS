@@ -1,0 +1,51 @@
+{
+  "project": {
+    "name": "LucidOS",
+    "version": "1.0.0-alpha",
+    "description": "A smooth, visually polished Android operating system"
+  },
+  "build": {
+    "minSdk": 33,
+    "targetSdk": 34,
+    "compileSdk": 34,
+    "kotlinVersion": "1.9.0",
+    "gradleVersion": "8.0"
+  },
+  "modules": [
+    {
+      "name": "frameworks/base",
+      "type": "framework",
+      "description": "Android framework customizations"
+    },
+    {
+      "name": "packages/apps",
+      "type": "applications",
+      "description": "System applications"
+    },
+    {
+      "name": "packages/services",
+      "type": "services",
+      "description": "System services"
+    }
+  ],
+  "features": {
+    "ui": {
+      "customLauncher": true,
+      "customSystemUI": true,
+      "animations": "smooth"
+    },
+    "performance": {
+      "memoryOptimization": true,
+      "batteryOptimization": true,
+      "cpuOptimization": true
+    },
+    "privacy": {
+      "enhancedPermissions": true,
+      "privacyDashboard": true
+    }
+  },
+  "ci": {
+    "enabled": true,
+    "provider": "github-actions"
+  }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lucidos.systemui">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.ACCESS_STATUS_BAR_VISIBILITY" />
+    <uses-permission android:name="android.permission.MANAGE_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.LucidOS.SystemUI"
+        android:usesCleartextTraffic="false">
+
+        <service
+            android:name=".service.SystemUIService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".statusbar.StatusBarService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.SystemUIActivity"
+            android:exported="true"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

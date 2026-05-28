@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LucidOS Launcher</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="app_drawer">App Drawer</string>
+    <string name="search_apps">Search apps...</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="no_apps">No apps found</string>
+</resources>

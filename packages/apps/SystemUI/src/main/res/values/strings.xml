@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LucidOS System UI</string>
+    <string name="status_bar_label">Status Bar</string>
+    <string name="notification_center_label">Notifications</string>
+    <string name="quick_settings_label">Quick Settings</string>
+    <string name="navigation_bar_label">Navigation Bar</string>
+</resources>

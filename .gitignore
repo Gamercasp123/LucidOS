@@ -1,0 +1,37 @@
+# Build artifacts
+build/
+.gradle/
+*.apk
+*.dex
+*.class
+*.jar
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/settings.json
+.vscode/launch.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+local.properties
+
+# Temporary files
+*.log
+*.swp
+*.swo
+*~
+
+# Dependencies
+/node_modules/
+
+# Output
+out/
+dist/
+release/
