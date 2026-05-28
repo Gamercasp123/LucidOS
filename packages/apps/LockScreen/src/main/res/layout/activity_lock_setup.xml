@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lock Screen Setup"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Authentication Type Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Authentication Type"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <RadioGroup
+            android:id="@+id/auth_type_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/radio_pin_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4-Digit PIN"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio_pin_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6-Digit PIN" />
+
+            <RadioButton
+                android:id="@+id/radio_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16+ Character Password" />
+
+        </RadioGroup>
+
+        <!-- Credential Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Authentication Code/Password"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/credential_input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="0000"
+            android:inputType="number"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Parental PIN (Optional) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parental PIN (Optional - 4 digits)"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/parental_pin_input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="0000"
+            android:inputType="number"
+            android:padding="12dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:spacing="12dp">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Save" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

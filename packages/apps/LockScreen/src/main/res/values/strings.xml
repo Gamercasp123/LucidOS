@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LucidOS Lock Screen</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="unlock">Unlock</string>
+    <string name="setup">Setup Lock Screen</string>
+    <string name="parental_pin">Parental PIN</string>
+</resources>

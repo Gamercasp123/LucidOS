@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/black"
+    android:padding="24dp">
+
+    <!-- Clock/Time Display -->
+    <TextClock
+        android:id="@+id/lock_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="h:mm"
+        android:format24Hour="HH:mm"
+        android:textSize="56sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="48dp" />
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter PIN"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Authentication Input -->
+    <EditText
+        android:id="@+id/auth_input"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="0000"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:background="@drawable/input_background"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Unlock"
+        android:textSize="16sp"
+        android:background="@drawable/button_background" />
+
+    <!-- Fingerprint/Face recognition placeholder -->
+    <ImageButton
+        android:id="@+id/biometric_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/circular_button_background"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:contentDescription="Biometric" />
+
+</LinearLayout>
