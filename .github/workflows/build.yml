@@ -20,7 +20,14 @@ jobs:
         distribution: 'temurin'
 
     - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
+      run: |
+        # Use the pre-installed, JDK 17-compatible cmdline-tools/latest path
+        # This avoids the "Fetch remote repository" crash common with legacy tools
+        echo "$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_PATH
+        echo "$ANDROID_HOME/platform-tools" >> $GITHUB_PATH
+
+    - name: Accept Android Licenses
+      run: yes | sdkmanager --licenses || true
 
     - name: Set up Gradle
       uses: gradle/actions/setup-gradle@v3
